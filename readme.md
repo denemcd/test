@@ -1,7 +1,5 @@
 # Read Me
 
-I am testing Git Hub with MS Code.
+This is a test uploaad for playing with Git and MS Code
 
-## This is another test
-
-Testing again
+Have fun playing my quiz!

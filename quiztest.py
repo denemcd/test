@@ -4,7 +4,7 @@ import time
 import urllib
 
 # Set variables
-questionurl = "https://opentdb.com/api.php?amount=10&type=multiple&encode=url3986"
+questionurl = "https://opentdb.com/api.php?amount=10&type=multiple&encode=url3986&difficulty=easy"
 score = 0
 question_number = 0
 
@@ -15,7 +15,6 @@ questions = r.json()
 # Start the quiz
 for question in questions["results"]:  # Process the questions
     user_answer = 0
-    valid_answer = False
     question_number += 1
 
     question_text = question["question"]
@@ -34,7 +33,7 @@ for question in questions["results"]:  # Process the questions
     print("\nQuestion " + str(question_number) + ": " + question_text)
 
     answers = random.sample(answers, k=4)  # randomise answers
-    x = 0
+    x = 0  # Reset the answer number
 
     for answer in answers:  # Print the answers on screen
         x += 1
